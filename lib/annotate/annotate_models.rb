@@ -259,7 +259,7 @@ module AnnotateModels
       # this is for non-rails projects, which don't get Rails auto-require magic
       require File.expand_path("#{model_dir}/#{file}") unless Module.const_defined?(:Rails)
 
-      model = ActiveSupport::Inflector.camelize(file.gsub(/\.rb$/, ''))
+      model = ActiveSupport::Inflector.camelize(file.gsub(/(_decorator)?\.rb$/, ''))
       parts = model.split('::')
       begin
         parts.inject(Object) {|klass, part| klass.const_get(part) }

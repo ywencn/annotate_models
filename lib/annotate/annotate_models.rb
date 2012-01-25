@@ -8,7 +8,7 @@ module AnnotateModels
     # File.join for windows reverse bar compat?
     # I dont use windows, can`t test
     UNIT_TEST_DIR     = File.join("test", "unit"  )
-    SPEC_MODEL_DIR    = File.join("spec", "models")
+    SPEC_MODEL_DIR    = File.join("csite", "spec", "models")
     # Object Daddy http://github.com/flogic/object_daddy
     EXEMPLARS_TEST_DIR     = File.join("test", "exemplars")
     EXEMPLARS_SPEC_DIR     = File.join("spec", "exemplars")
@@ -16,14 +16,14 @@ module AnnotateModels
     BLUEPRINTS_DIR         = File.join("test", "blueprints")
     # FactoryGirl http://github.com/thoughtbot/factory_girl
     FACTORIES_TEST_DIR     = File.join("test", "factories")
-    FACTORIES_SPEC_DIR     = File.join("spec", "factories")
+    FACTORIES_SPEC_DIR     = File.join("csite", "spec", "factories")
     # Fabrication https://github.com/paulelliott/fabrication.git
     FABRICATORS_TEST_DIR   = File.join("test", "fabricators")
     FABRICATORS_SPEC_DIR   = File.join("spec", "fabricators")
     
 
     def model_dir
-      @model_dir || "app/models"
+      @model_dir || "csite/app/models"
     end
 
     def model_dir=(dir)
